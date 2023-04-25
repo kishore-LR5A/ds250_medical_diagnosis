@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from symptoms import symptom_array
 # import sklearn
 # print(sklearn.__version__)
-from utils import get_desc, get_prediction, get_precautions
+from utils import get_desc, get_prediction, get_precautions, desc
 app = FastAPI()
 
 # home page
@@ -34,6 +34,13 @@ def predict_disease(symp_array: symptom_array):
         "model_used": "Decision Tree Classifier, trained on 4920 samples"
     }
 
+@app.get('/description')
+def disease_description(disease):
+    try:
+        x = desc[desc["Disease"] == disease].values[0][1]
+    except:
+        x = "Description Not Found"
+    return x
 
 # print(dt_clf.predict([[0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 #                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

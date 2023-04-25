@@ -2,7 +2,24 @@
 
 > <code>**Created as a part of DS250 course.**</code>
 
-> <code ><a style="color:green;" href="https://github.com/kishore-LR5A/ds250_medical_diagnosis.git">**Github link of the project 🚀**</a></code>
+> <code>**Now as part of stnt2 assignment, Dockerized the entire frontend and backend.**</code>
+
+> <code>**Now you can run the project with just one command: "docker-compose up".**
+>
+> 1. Go to localhost:3000 in your machine to see frontend.
+> 2. Go to localhost:8000/docs to see backend(fastapi's openapi spec docs).
+>
+> **You can stop with "docker compose down".** > </code>
+
+### **Compose Workflow**
+
+> **docker compose's up, ps and logs commands**
+
+![docker compose's up,ps and logs commands](./images/img_1.png "up | ps | logs")
+
+> **docker compose's stop, start and down commands**
+
+![docker compose's stop, start and down commands](./images/img_2.png "stop | start | down")
 
 ### **In this project:**
 
