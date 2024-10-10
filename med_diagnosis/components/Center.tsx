@@ -29,7 +29,7 @@ function Center() {
 
   const handleSend = async () => {
     try {
-      const res = await fetch('/api/predict', {
+      const res = await fetch('api/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
